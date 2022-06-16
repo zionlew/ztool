@@ -1,4 +1,4 @@
-package org.zion.def;
+package com.word.util;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -101,10 +101,38 @@ public class TransDefUtil {
 		byte[] paramString1 = localByteArrayOutputStream.toByteArray();
 		try {
 			localByteArrayOutputStream.close();
-			return paramString1;
+			//return paramString1;
+			return f(paramString1);
 		} catch (IOException localIOException) {
 			System.err.println("Error while decoding BASE64: " + localIOException.toString());
 		}
-		return paramString1;
+		//return paramString1;
+		return f(paramString1);
 	}
+
+	public static String trans(String paramString) {
+		
+		try {
+			return new String(func4(paramString));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return paramString;
+	}
+
+	public static byte[] f(byte[] paramArrayOfByte) {
+		if (paramArrayOfByte == null)
+			return null;
+		int j = paramArrayOfByte.length;
+		byte[] arrayOfByte = new byte[j];
+		int i = 0;
+		while (true) {
+			if (i >= j)
+				return arrayOfByte;
+			arrayOfByte[i] = ((byte) (paramArrayOfByte[i] ^ 0xFFFFFFFF));
+			i += 1;
+		}
+	}
+	
+	
 }

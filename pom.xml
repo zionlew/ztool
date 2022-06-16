@@ -10,5 +10,19 @@
 			<artifactId>asm</artifactId>
 			<version>9.1</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.xerial</groupId>
+			<artifactId>sqlite-jdbc</artifactId>
+			<version>3.23.1</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
+	
+	
 </project>

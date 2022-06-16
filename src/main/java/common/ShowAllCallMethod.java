@@ -1,8 +1,8 @@
 /**----------------------------------------------------------+
  +   PGM-ID  :   Test.java
  +   Author  :   LH
- +   Date    :   2022Äê6ÔÂ3ÈÕ
- +   Function:   ±éÀúËùÓĞÒıÓÃµÄÀàºÍ·½·¨
+ +   Date    :   2022.06.03
+ +   Function:   è·å¾—æ‰€æœ‰å¼•ç”¨ç±»çš„æ–¹æ³•
  +               
  +-----------------------------------------------------------*/
 package common;
@@ -13,7 +13,8 @@ import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
-import org.zion.def.TransDefMain;
+
+import com.word.util.TransDefMain;
 
 public class ShowAllCallMethod {
 
